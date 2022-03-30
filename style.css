@@ -1,0 +1,277 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.meni ul {
+  width: 100%;
+  display: table;
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.meni ul li {
+  display: inline-block;
+  text-align: center;
+  float: none;
+}
+
+.meni ul li:first-child {
+  display: none;
+}
+
+.meni a {
+  display: block;
+  text-align: center;
+  padding: 20px 2px;
+  text-decoration: none;
+  color: #636363;
+}
+
+.meni a:hover {
+  color: #c7db12;
+}
+
+.meni a:active {
+  color: #82b53a;
+}
+
+.meni a:focus {
+  color: #449db1;
+}
+
+.meni a:visited {
+  color: #2257b8;
+}
+
+#footer {
+  background-color: lightgray;
+  margin-top: 10%;
+}
+
+#footer ul {
+  width: 100%;
+  display: table;
+  text-align: center;
+  margin-top: 20%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#footer ul li {
+  display: inline-block;
+  text-align: center;
+  float: none;
+  margin: 0% 2%;
+}
+
+#footer a {
+  display: block;
+  text-align: center;
+  padding: 20px 2px;
+  text-decoration: none;
+  color: #636363;
+}
+
+#footer a:hover {
+  color: #c7db12;
+}
+
+#footer a:active {
+  color: #82b53a;
+}
+
+#footer a:focus {
+  color: #449db1;
+}
+
+#footer a:visited {
+  color: #2257b8;
+}
+
+.krug {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.hamburger-meni {
+  display: none;
+  margin-top: 0px;
+}
+
+#linija {
+  padding: 0px;
+  margin: 0px;
+  height: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#c7db12), color-stop(#82b53a), color-stop(#449db1), to(#2257b8));
+  background-image: linear-gradient(to right, #c7db12, #82b53a, #449db1, #2257b8);
+}
+
+.centar {
+  margin: auto;
+  width: 50%;
+  margin-top: 5%;
+}
+
+.naslov {
+  font-size: 2.5em;
+}
+
+.icon {
+  text-align: center;
+  background-color: lightgray;
+}
+
+.icon p {
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  color: #636363;
+  font-size: 50px;
+}
+
+.margine {
+  margin-right: 10%;
+}
+
+.tekst {
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.dugme {
+  float: right;
+  width: 50%;
+  height: 5%;
+}
+
+#homeicon, #abouticon, #workicon, #contacticon {
+  display: none;
+}
+
+#logo {
+  width: 100px;
+  height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  #homeicon, #abouticon, #workicon, #contacticon {
+    display: block;
+  }
+  #home, #about, #work, #contact {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+  .tekst {
+    font-size: 16px;
+  }
+  .naslov {
+    font-size: 20px;
+  }
+  .centar {
+    margin: 5% 10%;
+    width: 80%;
+  }
+  #FooterDiv3 {
+    float: right;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #homeicon, #abouticon, #workicon, #contacticon {
+    display: none;
+  }
+  .hamburger-meni {
+    display: none;
+    margin-top: 0px;
+  }
+  #PrviRow .naslov {
+    text-align: center;
+    font-size: 24px;
+  }
+  #PrviRow .tekst p:nth-child(2) {
+    display: none;
+  }
+  #DrugiRow .naslov {
+    text-align: center;
+    font-size: 24px;
+  }
+  #DrugiRow .tekst p:nth-child(2) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

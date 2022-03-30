@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/49f2be0c04.js" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="style.css">
+    <script src="JavaScript.js"></script>
+    <title>Bojan Grujic</title>
+</head>
+<body onresize="izmena()">
+    
+    <div id="header" class="row meni">
+        <div class="col-2">
+            <img src="/slike/logo.png" alt="logo" id="logo">
+        </div>
+        
+       
+        <div class="col-9" >
+            <ul class="menu">
+                <li class="hamburger-meni"><a href="#" onclick="Meni()"><i class="fa-solid fa-bars"></i></a></li>
+                <li><a href="#" id="home">HOME /</a></li>
+                <li><a href="#" id="about">ABOUT US /</a></li>
+                <li><a href="#" id="work">OUR WORK /</a></li>
+                <li><a href="#" id="contact">CONTACT</a></li>
+                <li><a href="#" id="homeicon"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="#" id="abouticon"><i class="fa-solid fa-circle-question"></i></a></li>
+                <li><a href="#" id="workicon"><i class="fa-solid fa-graduation-cap"></i></a></li>
+                <li><a href="#" id="contacticon"><i class="fa-solid fa-envelope fa-lg"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="col-1">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+
+
+    </div>
+
+    <div class="row col-12" id="linija"></div>
+
+
+    <div id="body">
+        <div class="row" id="carousel">
+           <img src="/slike/slika2.jpeg" alt="" style="height: 50%; width: 100%; ">
+        </div>
+
+        <div class="row centar" id="PrviRow">
+            <p class="naslov">WHO WE ARE</p>
+            <div class="col-6 icon">
+                <p><i class="fa-solid fa-graduation-cap"></i></p>
+            </div>
+            <div class="col-6 tekst">
+                <p>Lorem ipsum dolor</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta tenetur debitis cum voluptatum quaerat!</p>
+                <button class="dugme">SHOW MORE</button>
+            </div> 
+        </div>
+
+        <div class="row centar" id="DrugiRow">
+            <div class="col-6 icon">
+                <p><i class="fa-solid fa-thumbs-up"></i></p>
+            </div>
+            <div class="col-6 tekst">
+                <p>Lorem ipsum dolor</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta tenetur debitis cum voluptatum quaerat!</p>
+                <button class="dugme">SHOW MORE</button>
+            </div> 
+        </div>
+
+        <div class="row centar">
+            <p class="naslov">WHAT WE DO</p>
+            <div class="col-5 icon margine">
+                <p><i class="fa-solid fa-calculator"></i></p>
+            </div>
+            <div class="col-5 icon ">
+                <p><i class="fa-solid fa-cloud"></i></i></p>
+            </div> 
+        </div>
+
+        <div class="row centar">
+            <div class="col-5 icon margine">
+                <p><i class="fa-solid fa-clock"></i></p>
+            </div>
+            <div class="col-5 icon ">
+                <p><i class="fa-solid fa-heart"></i></p>
+            </div> 
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div id="footer" class="row">
+
+        <div class="col-2" id="FooterDiv1">
+            <ul>
+                <li><a href="https://www.facebook.com/" class="krug" target="_blank"><i class="fa-brands fa-facebook-f fa-lg"></i></a></li>
+                <li><a href="https://twitter.com/?lang=sr" class="krug" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+                <li><a href="https://www.google.com/intl/sr/gmail/about/" class="krug" target="_blank"><i class="fa-solid fa-envelope fa-lg"></i></a></li>
+            </ul>   
+        </div>
+
+        <div class="col-9 hide" id="FooterDiv2">
+            <ul>
+                <li><a href="#" id="homeF">HOME</a></li>
+                <li><a href="#" id="aboutF">ABOUT US</a></li>
+                <li><a href="#" id="workF">OUR WORK</a></li>
+                <li><a href="#" id="contactF">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="col-1" id="FooterDiv3">
+            <a href="#" class="krug" onclick="top()"><i class="fa-solid fa-arrow-up fa-lg"></i></a>
+        </div>   
+        
+    </div>
+
+<script>
+    function izmena(){
+    var fo1=document.getElementById("FooterDiv1");
+    var fo2=document.getElementById("FooterDiv2");
+
+    if(window.innerWidth<480){
+        fo2.className="col-2 hide";
+        fo1.className="col-9";
+    }
+    if(window.innerWidth>=480){
+        fo1.className="col-2";
+        fo2.className="col-9 hide"
+    }
+};
+</script>
+
+</body>
+</html>

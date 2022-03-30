@@ -1,0 +1,254 @@
+$zuta: rgb(199, 219, 18);
+$zelena: rgb(130, 181, 58);
+$svetlo_plava: rgb(68, 157, 177);
+$plava: rgb(34, 87, 184);
+$siva:rgb(211, 211, 211);
+$tamnoSiva: rgb(99, 99, 99);
+
+
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+[class*="col-"]{
+    float: left;
+    padding: 15px;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+//Meni za heder
+.meni{
+    ul{
+        width: 100%;
+        display: table;
+        text-align: center;
+
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        li{
+            display: inline-block;
+            text-align: center;
+            float: none;
+            &:first-child{
+                display: none;
+            }
+        }
+    }
+    a{
+        display: block;
+        text-align: center;
+        padding: 20px 2px;
+        text-decoration: none;
+        color: $tamnoSiva;
+        &:hover{
+            color: $zuta;
+        }
+        &:active{
+            color: $zelena;
+        }
+        &:focus{
+            color: $svetlo_plava;
+        }
+        &:visited{
+            color: $plava;
+        }
+    }
+}
+
+//Meni za footer
+#footer{
+    background-color: $siva;
+    margin-top: 10%;
+    ul{
+        width: 100%;
+        display: table;
+        text-align: center;
+        margin-top:20%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        li{
+            display: inline-block;
+            text-align: center;
+            float: none;
+            margin: 0% 2%;
+            }
+        }
+    a{
+        display: block;
+        text-align: center;
+        padding: 20px 2px;
+        text-decoration: none;
+        color: $tamnoSiva;
+        &:hover{
+            color: $zuta;
+        }
+        &:active{
+            color: $zelena;
+        }
+        &:focus{
+            color: $svetlo_plava;
+        }
+        &:visited{
+            color: $plava;
+        }
+    }
+}
+.krug{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.hamburger-meni{
+    display:none;
+    margin-top: 0px;
+}
+
+#linija{
+    padding: 0px;
+    margin: 0px;
+    height: 10px;
+    background-image: linear-gradient(to right,$zuta,$zelena,$svetlo_plava,$plava);
+}
+
+.centar{
+    margin: auto;
+    width: 50%;
+    margin-top: 5%;
+}
+
+.naslov{
+    font-size: 2.5em;
+}
+
+
+.icon{
+    text-align: center;
+    background-color: $siva;
+    p{
+        width: 100%;
+        height: 100%;
+        background-color: $siva;
+        color: $tamnoSiva;
+        font-size: 50px;
+    }
+}
+
+.margine{
+    margin-right: 10%;
+}
+
+.tekst{
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.dugme{
+    float: right;
+    width:50%;
+    height:5%;
+}
+
+#homeicon,#abouticon,#workicon,#contacticon{
+    display: none;
+}
+
+#logo{
+    width: 100px;
+    height: 30px;
+}
+
+
+@media screen and(max-width:480px){
+    #homeicon,#abouticon,#workicon,#contacticon{
+        display:block;
+    }
+    #home,#about,#work,#contact{
+        display:none;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .tekst{
+        font-size: 16px;
+    }
+    .naslov{
+        font-size: 20px;
+    }
+    .centar{
+        margin: 5% 10%;
+        width: 80%;  
+    }
+
+    #FooterDiv3{
+        float: right;
+        margin-right: 10%;
+    }
+
+   
+
+}
+
+@media screen and(max-width:320px){
+    #homeicon,#abouticon,#workicon,#contacticon{
+        display:none;
+    }
+    .hamburger-meni{
+        display:none;
+        margin-top: 0px;
+    }
+
+    #PrviRow{
+        .naslov{
+            text-align: center;
+            font-size: 24px;
+        }
+        .tekst{
+            p:nth-child(2){
+                display:none;
+            }
+        }
+    }
+    #DrugiRow{
+        .naslov{
+            text-align: center;
+            font-size: 24px;
+        }
+        .tekst{
+            p:nth-child(2){
+                display:none;
+            }
+        }
+    }
+}
+
