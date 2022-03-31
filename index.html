@@ -12,14 +12,18 @@
 <body onresize="izmena()">
     
     <div id="header" class="row meni">
-        <div class="col-2">
-            <img src="/slike/logo.png" alt="logo" id="logo">
+
+        <div class="col-2" id="HeaderDiv1">
+            <img src="logo.png" alt="logo" id="logo">
         </div>
         
        
-        <div class="col-9" >
-            <ul class="menu">
-                <li class="hamburger-meni"><a href="#" onclick="Meni()"><i class="fa-solid fa-bars"></i></a></li>
+        <div class="col-1" id="hamburger">
+            <a href="#" onclick="Meni()"><i class="fa-solid fa-bars"></i></a>
+        </div>
+
+        <div class="col-8" id="HeaderDiv2">
+            <ul id="GlavniMeni">
                 <li><a href="#" id="home">HOME /</a></li>
                 <li><a href="#" id="about">ABOUT US /</a></li>
                 <li><a href="#" id="work">OUR WORK /</a></li>
@@ -31,59 +35,71 @@
             </ul>
         </div>
 
-        <div class="col-1">
+        <div class="col-1" id="HeaderDiv3">
+            <input type="text" placeholder="Search..">
             <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
 
 
     </div>
 
+
+    <div id="minmenu">
+        <ul>
+            <li><a href="#">HOME /</a></li>
+            <li><a href="#">ABOUT US /</a></li>
+            <li><a href="#">OUR WORK /</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </div>
+
+
     <div class="row col-12" id="linija"></div>
 
 
     <div id="body">
         <div class="row" id="carousel">
-           <img src="/slike/slika2.jpeg" alt="" style="height: 50%; width: 100%; ">
+           <img src="slika2.jpeg" alt="" style="height: 50%; width: 100%; ">
         </div>
 
         <div class="row centar" id="PrviRow">
             <p class="naslov">WHO WE ARE</p>
-            <div class="col-6 icon">
+            <div class="col-6 icon" id="PrviRowIcon">
                 <p><i class="fa-solid fa-graduation-cap"></i></p>
             </div>
-            <div class="col-6 tekst">
+            <div class="col-6 tekst" id="PrviRowText">
                 <p>Lorem ipsum dolor</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta tenetur debitis cum voluptatum quaerat!</p>
-                <button class="dugme">SHOW MORE</button>
+                <p class="showIspis" id="tekst1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta tenetur debitis cum voluptatum quaerat!</p>
+                <button class="dugme" onclick="prikazi1()">SHOW MORE</button>
             </div> 
         </div>
 
         <div class="row centar" id="DrugiRow">
-            <div class="col-6 icon">
+            <div class="col-6 icon" id="DrugiRowIcon">
                 <p><i class="fa-solid fa-thumbs-up"></i></p>
             </div>
-            <div class="col-6 tekst">
+            <div class="col-6 tekst" id="DrugiRowText">
                 <p>Lorem ipsum dolor</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta tenetur debitis cum voluptatum quaerat!</p>
-                <button class="dugme">SHOW MORE</button>
+                <p class="showIspis" id="tekst2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta tenetur debitis cum voluptatum quaerat!</p>
+                <button class="dugme" onclick="prikazi2()">SHOW MORE</button>
             </div> 
         </div>
 
-        <div class="row centar">
+        <div class="row centar" id="TreciRow">
             <p class="naslov">WHAT WE DO</p>
-            <div class="col-5 icon margine">
+            <div class="col-5 icon margine" id="TreciRowIcon1">
                 <p><i class="fa-solid fa-calculator"></i></p>
             </div>
-            <div class="col-5 icon ">
+            <div class="col-5 icon " id="TreciRowIcon2">
                 <p><i class="fa-solid fa-cloud"></i></i></p>
             </div> 
         </div>
 
-        <div class="row centar">
-            <div class="col-5 icon margine">
+        <div class="row centar" id="CetvrtiRow">
+            <div class="col-5 icon margine" id="CetvrtiRowIcon1">
                 <p><i class="fa-solid fa-clock"></i></p>
             </div>
-            <div class="col-5 icon ">
+            <div class="col-5 icon " id="CetvrtiRowIcon2">
                 <p><i class="fa-solid fa-heart"></i></p>
             </div> 
         </div>
@@ -121,19 +137,79 @@
     </div>
 
 <script>
-    function izmena(){
-    var fo1=document.getElementById("FooterDiv1");
-    var fo2=document.getElementById("FooterDiv2");
 
-    if(window.innerWidth<480){
-        fo2.className="col-2 hide";
-        fo1.className="col-9";
-    }
-    if(window.innerWidth>=480){
-        fo1.className="col-2";
-        fo2.className="col-9 hide"
-    }
-};
+function Meni() {
+    document.getElementById("minmenu").classList.toggle("pojavi");    
+}
+function prikazi1(){
+    document.getElementById("tekst1").classList.toggle("showIspis");
+}
+function prikazi2(){
+    document.getElementById("tekst2").classList.toggle("showIspis");
+}
+
+    function izmena(){
+        var fo1=document.getElementById("FooterDiv1");
+        var fo2=document.getElementById("FooterDiv2");
+
+        var i1=document.getElementById("PrviRowIcon");
+        var t1=document.getElementById("PrviRowText");
+
+        var i2=document.getElementById("DrugiRowIcon");
+        var t2=document.getElementById("DrugiRowText");
+
+        var i3=document.getElementById("TreciRowIcon1");
+        var i4=document.getElementById("TreciRowIcon2");
+
+        var i5=document.getElementById("CetvrtiRowIcon1");
+        var i6=document.getElementById("CetvrtiRowIcon2");
+        
+        var heder2=document.getElementById("HeaderDiv2");
+
+        if(window.innerWidth<480){
+            fo2.className="col-2 hide";
+            fo1.className="col-9";
+        }
+        if(window.innerWidth>=480){
+            fo1.className="col-2";
+            fo2.className="col-9 hide";
+        }
+
+        if(window.innerWidth<320){
+            i1.className="col-12 icon";
+            t1.className="col-12 text";
+
+            i2.className="col-12 icon";
+            t2.className="col-12 text";
+
+            i3.className="col-12 icon margin";
+            i4.className="col-12 icon margin";
+
+            i5.className="col-12 icon margin";
+            i6.className="col-12 icon margin";
+
+            heder2.className="col-1";
+        }
+        if(window.innerWidth>=320){
+            i1.className="col-5 icon";
+            t1.className="col-5 text";
+
+            i2.className="col-5 icon";
+            t2.className="col-5 text";
+
+            i3.className="col-5 icon margine";
+            i4.className="col-5 icon";
+
+            i5.className="col-5 icon margine";
+            i6.className="col-5 icon";
+            
+            heder2.className="col-8";
+        }
+    };
+
+
+
+
 </script>
 
 </body>

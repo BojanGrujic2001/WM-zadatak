@@ -54,9 +54,6 @@ html{
             display: inline-block;
             text-align: center;
             float: none;
-            &:first-child{
-                display: none;
-            }
         }
     }
     a{
@@ -120,16 +117,52 @@ html{
         }
     }
 }
+
+//meni za 320
+#minmenu{
+    display: none;
+    background-color: $siva;
+    ul{
+        width: 100%;
+        display: table;
+        text-align: center;
+        margin-top:20%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        li{
+            display: block;
+            text-align: center;
+            float: none;
+            }
+        }
+    a{
+        display: block;
+        text-align: center;
+        padding: 20px 2px;
+        text-decoration: none;
+        color: $tamnoSiva;
+        &:hover{
+            color: $zuta;
+        }
+        &:active{
+            color: $zelena;
+        }
+        &:focus{
+            color: $svetlo_plava;
+        }
+        &:visited{
+            color: $plava;
+        }
+    }
+}
+
 .krug{
     width: 50px;
     height: 50px;
     background-color: white;
     border-radius: 50%;
-}
-
-.hamburger-meni{
-    display:none;
-    margin-top: 0px;
 }
 
 #linija{
@@ -169,9 +202,15 @@ html{
 .tekst{
     font-size: 1.2em;
     text-align: justify;
+    padding-top: 0px;
+    &:first-child{
+        margin-top: 0px;
+    }
 }
 
 .dugme{
+    right: 0px;
+    bottom: 0px;
     float: right;
     width:50%;
     height:5%;
@@ -184,6 +223,15 @@ html{
 #logo{
     width: 100px;
     height: 30px;
+}
+
+#hamburger{
+    display: none;
+    float: right;
+}
+
+#HeaderDiv3{
+    float: right;
 }
 
 
@@ -223,32 +271,40 @@ html{
     #homeicon,#abouticon,#workicon,#contacticon{
         display:none;
     }
-    .hamburger-meni{
-        display:none;
-        margin-top: 0px;
+
+    #PrviRow,#DrugiRow{
+        .naslov{
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+    .showIspis{
+        display: none;
     }
 
-    #PrviRow{
-        .naslov{
-            text-align: center;
-            font-size: 24px;
-        }
-        .tekst{
-            p:nth-child(2){
-                display:none;
-            }
-        }
+    #hamburger{
+        display: block;
     }
-    #DrugiRow{
-        .naslov{
-            text-align: center;
-            font-size: 24px;
+    
+    .pojavi{display: block !important;}
+    .menu{
+        background-color: $siva;
+        #home,#about,#work,#contact{
+            display:block;
         }
-        .tekst{
-            p:nth-child(2){
-                display:none;
+        li{
+            display: block;
+            overflow: hidden;
+            a{
+                display: block;
+                color: $tamnoSiva;
             }
-        }
+        }  
     }
+    .margin{
+        margin: 5% 0%;
+    }
+
+   
 }
 

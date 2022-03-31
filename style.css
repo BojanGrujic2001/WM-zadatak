@@ -83,10 +83,6 @@ html {
   float: none;
 }
 
-.meni ul li:first-child {
-  display: none;
-}
-
 .meni a {
   display: block;
   text-align: center;
@@ -158,16 +154,57 @@ html {
   color: #2257b8;
 }
 
+#minmenu {
+  display: none;
+  background-color: lightgray;
+}
+
+#minmenu ul {
+  width: 100%;
+  display: table;
+  text-align: center;
+  margin-top: 20%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#minmenu ul li {
+  display: block;
+  text-align: center;
+  float: none;
+}
+
+#minmenu a {
+  display: block;
+  text-align: center;
+  padding: 20px 2px;
+  text-decoration: none;
+  color: #636363;
+}
+
+#minmenu a:hover {
+  color: #c7db12;
+}
+
+#minmenu a:active {
+  color: #82b53a;
+}
+
+#minmenu a:focus {
+  color: #449db1;
+}
+
+#minmenu a:visited {
+  color: #2257b8;
+}
+
 .krug {
   width: 50px;
   height: 50px;
   background-color: white;
   border-radius: 50%;
-}
-
-.hamburger-meni {
-  display: none;
-  margin-top: 0px;
 }
 
 #linija {
@@ -208,9 +245,16 @@ html {
 .tekst {
   font-size: 1.2em;
   text-align: justify;
+  padding-top: 0px;
+}
+
+.tekst:first-child {
+  margin-top: 0px;
 }
 
 .dugme {
+  right: 0px;
+  bottom: 0px;
   float: right;
   width: 50%;
   height: 5%;
@@ -223,6 +267,15 @@ html {
 #logo {
   width: 100px;
   height: 30px;
+}
+
+#hamburger {
+  display: none;
+  float: right;
+}
+
+#HeaderDiv3 {
+  float: right;
 }
 
 @media screen and (max-width: 480px) {
@@ -255,23 +308,35 @@ html {
   #homeicon, #abouticon, #workicon, #contacticon {
     display: none;
   }
-  .hamburger-meni {
-    display: none;
-    margin-top: 0px;
-  }
-  #PrviRow .naslov {
+  #PrviRow .naslov, #DrugiRow .naslov {
     text-align: center;
     font-size: 24px;
   }
-  #PrviRow .tekst p:nth-child(2) {
+  .showIspis {
     display: none;
   }
-  #DrugiRow .naslov {
-    text-align: center;
-    font-size: 24px;
+  #hamburger {
+    display: block;
   }
-  #DrugiRow .tekst p:nth-child(2) {
-    display: none;
+  .pojavi {
+    display: block !important;
+  }
+  .menu {
+    background-color: lightgray;
+  }
+  .menu #home, .menu #about, .menu #work, .menu #contact {
+    display: block;
+  }
+  .menu li {
+    display: block;
+    overflow: hidden;
+  }
+  .menu li a {
+    display: block;
+    color: #636363;
+  }
+  .margin {
+    margin: 5% 0%;
   }
 }
 /*# sourceMappingURL=style.css.map */
