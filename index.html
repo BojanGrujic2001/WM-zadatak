@@ -36,13 +36,19 @@
         </div>
 
         <div class="col-1" id="HeaderDiv3">
-            <input type="text" placeholder="Search..">
-            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" onclick="showbar()"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
 
 
     </div>
 
+    
+    <div class="row hidebar" id="search-bar">
+        <input type="text" placeholder="Search..." id="SearchText">
+        <button onclick="Search()">Search</button>
+    </div>
+    
+    
 
     <div id="minmenu">
         <ul>
@@ -58,9 +64,15 @@
 
 
     <div id="body">
+        
         <div class="row" id="carousel">
            <img src="slika2.jpeg" alt="" style="height: 50%; width: 100%; ">
         </div>
+
+
+
+
+
 
         <div class="row centar" id="PrviRow">
             <p class="naslov">WHO WE ARE</p>
@@ -147,65 +159,73 @@ function prikazi1(){
 function prikazi2(){
     document.getElementById("tekst2").classList.toggle("showIspis");
 }
+function showbar(){
+    document.getElementById("search-bar").classList.toggle("hidebar");
+}
 
-    function izmena(){
-        var fo1=document.getElementById("FooterDiv1");
-        var fo2=document.getElementById("FooterDiv2");
+function Search(){
+    alert("You Searched For: "+document.getElementById("SearchText").value);
+}
 
-        var i1=document.getElementById("PrviRowIcon");
-        var t1=document.getElementById("PrviRowText");
 
-        var i2=document.getElementById("DrugiRowIcon");
-        var t2=document.getElementById("DrugiRowText");
+function izmena(){
+    var fo1=document.getElementById("FooterDiv1");
+    var fo2=document.getElementById("FooterDiv2");
 
-        var i3=document.getElementById("TreciRowIcon1");
-        var i4=document.getElementById("TreciRowIcon2");
+    var i1=document.getElementById("PrviRowIcon");
+    var t1=document.getElementById("PrviRowText");
 
-        var i5=document.getElementById("CetvrtiRowIcon1");
-        var i6=document.getElementById("CetvrtiRowIcon2");
+    var i2=document.getElementById("DrugiRowIcon");
+    var t2=document.getElementById("DrugiRowText");
+
+    var i3=document.getElementById("TreciRowIcon1");
+    var i4=document.getElementById("TreciRowIcon2");
+
+    var i5=document.getElementById("CetvrtiRowIcon1");
+    var i6=document.getElementById("CetvrtiRowIcon2");
+    
+    var heder2=document.getElementById("HeaderDiv2");
+
+    if(window.innerWidth<480){
+        fo2.className="col-2 hide";
+        fo1.className="col-9";
+    }
+    if(window.innerWidth>=480){
+        fo1.className="col-2";
+        fo2.className="col-9 hide";
+    }
+
+    if(window.innerWidth<320){
+        i1.className="col-12 icon";
+        t1.className="col-12 text";
+
+        i2.className="col-12 icon";
+        t2.className="col-12 text";
+
+        i3.className="col-12 icon margin";
+        i4.className="col-12 icon margin";
+
+        i5.className="col-12 icon margin";
+        i6.className="col-12 icon margin";
+
+        heder2.className="col-1";
+    }
+    if(window.innerWidth>=320){
+        i1.className="col-5 icon";
+        t1.className="col-5 text";
+
+        i2.className="col-5 icon";
+        t2.className="col-5 text";
+
+        i3.className="col-5 icon margine";
+        i4.className="col-5 icon";
+
+        i5.className="col-5 icon margine";
+        i6.className="col-5 icon";
         
-        var heder2=document.getElementById("HeaderDiv2");
-
-        if(window.innerWidth<480){
-            fo2.className="col-2 hide";
-            fo1.className="col-9";
-        }
-        if(window.innerWidth>=480){
-            fo1.className="col-2";
-            fo2.className="col-9 hide";
-        }
-
-        if(window.innerWidth<320){
-            i1.className="col-12 icon";
-            t1.className="col-12 text";
-
-            i2.className="col-12 icon";
-            t2.className="col-12 text";
-
-            i3.className="col-12 icon margin";
-            i4.className="col-12 icon margin";
-
-            i5.className="col-12 icon margin";
-            i6.className="col-12 icon margin";
-
-            heder2.className="col-1";
-        }
-        if(window.innerWidth>=320){
-            i1.className="col-5 icon";
-            t1.className="col-5 text";
-
-            i2.className="col-5 icon";
-            t2.className="col-5 text";
-
-            i3.className="col-5 icon margine";
-            i4.className="col-5 icon";
-
-            i5.className="col-5 icon margine";
-            i6.className="col-5 icon";
-            
-            heder2.className="col-8";
-        }
-    };
+        heder2.className="col-8";
+    }
+};
 
 
 

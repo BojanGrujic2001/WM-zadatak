@@ -156,7 +156,6 @@ html {
 
 #minmenu {
   display: none;
-  background-color: lightgray;
 }
 
 #minmenu ul {
@@ -276,6 +275,19 @@ html {
 
 #HeaderDiv3 {
   float: right;
+}
+
+#search-bar {
+  float: right;
+  margin-bottom: 5%;
+}
+
+.hidebar {
+  display: none;
+}
+
+#carousel {
+  background-image: url("slika2.jpeg");
 }
 
 @media screen and (max-width: 480px) {
